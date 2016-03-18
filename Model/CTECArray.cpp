@@ -104,6 +104,57 @@ int CTECArray<Type>::getSize()
 {
 	return this->size = size;
 }
+/*
+ 1.check if exists
+ 2.point to head
+ 3.loop over nodes
+ 4.return index or -1 if not found
+*/
+template<class Type>
+int CTECArray<Type> :: indexOf(Type searchValue)
+{
+    assert(this->size > 0);
+    ArrayNode<Type> * current = head;
+    int indexNotFound = -1;
+    for (int index = 0; index < this->sie; index++)
+    {
+        if(current->getValue() == searchValue)
+        {
+            return index;
+        }
+        else
+        {
+            current = current->getValue();
+        }
+    }
+    return indexNotFound;
+}
+
+template<class Type>
+int CTECArray<Type> :: nextIndexOf(int startingIndex, Type searchValue)
+{
+    assert(this->size > 0);
+    assert(startingIndex >= 0 && startingIndex < this->size);
+    
+    ArrayNode<Type> * current = head;
+    int indexNotFound = -1;
+    for(int index = 0; index<startingIndex; index++)
+    {
+        current = current->getNext();
+    }
+    for (int index = startingIndex; index < this->sie; index++)
+    {
+        if(current->getValue() == searchValue)
+        {
+            return index;
+        }
+        else
+        {
+            current = current->getValue();
+        }
+    }
+    return indexNotFound;
+}
 
 
 
