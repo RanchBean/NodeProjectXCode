@@ -25,6 +25,7 @@ private:
 	ArrayNode<string> stringArrayNode;
 	ArrayNode<string> otherArrayNode;
 	Timer arrayTimer;
+    void sortData();
 public:
 	NodeController();
 	virtual ~NodeController();
