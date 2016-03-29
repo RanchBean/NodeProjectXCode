@@ -78,6 +78,14 @@ void CTECArray<Type> :: set(const Type& value, int position)
 		}
 	}
 }
+template <class Type>
+void CTECArray<Type> :: swap(int indexOne, int indexTwo)
+{
+    assert(indexOne < size && indexTwo < size);
+    Type temp = get(indexOne);
+    set(indexOne, get(indexTwo));
+    set(indexTwo, temp);
+}
 template<class Type>
 Type CTECArray<Type>::get(int position)
 {

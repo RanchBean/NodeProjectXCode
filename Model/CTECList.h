@@ -17,11 +17,13 @@ private:
 	ArrayNode<Type> * head;
 	ArrayNode<Type> * end;
 	void calculateSize();
+    void swap (int indexOne, int indexTwo);
+
 public:
 	CTECList(int size);
 	virtual ~CTECList();
 	int getSize();
-	void addToFront(const Type& value);
+    void addToFront(const Type& value);
 	void addToEnd(const Type& value);
 	void addAtIndex(int index, const Type& value);
 	Type getFront();

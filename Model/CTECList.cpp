@@ -37,6 +37,14 @@ int CTECList<Type>::getSize()
 {
 	return size;
 }
+template <class Type>
+void CTECList<Type> :: swap(int indexOne, int indexTwo)
+{
+    assert(indexOne < size && indexTwo < size);
+    Type temp = getFromIndex(indexOne);
+    set(indexOne, getFromIndex(indexTwo));
+    set(indexTwo, temp);
+}
 template<class Type>
 void CTECList<Type>:: addToFront(const Type& value)
 {
@@ -112,7 +120,7 @@ Type CTECList<Type>:: getFront()
 template<class Type>
 Type CTECList<Type>:: getEnd()
 {
-	return this->end;
+
 }
 template<class Type>
 Type CTECList<Type>:: getFromIndex(int index)
