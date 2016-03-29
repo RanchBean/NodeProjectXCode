@@ -26,6 +26,7 @@ public:
     void addToFront(const Type& value);
 	void addToEnd(const Type& value);
 	void addAtIndex(int index, const Type& value);
+    void selectionSort();
 	Type getFront();
 	Type getEnd();
 	Type getFromIndex(int index);
