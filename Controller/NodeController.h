@@ -26,6 +26,10 @@ private:
 	ArrayNode<string> otherArrayNode;
 	Timer arrayTimer;
     void sortData();
+    int * mergeData;
+    void doMergesort();
+    void mergesort();
+    void merge(int data[], int sizeOne, int sizeTwo);
 public:
 	NodeController();
 	virtual ~NodeController();
