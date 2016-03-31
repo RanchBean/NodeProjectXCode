@@ -12,6 +12,7 @@
 #include "../Model/ArrayNode.cpp"
 #include "../Model/CTECArray.cpp"
 #include "../Model/Timer.h"
+#include "../Model/CTECList.cpp"
 #include <string>
 using namespace std;
 
@@ -28,8 +29,12 @@ private:
     void sortData();
     int * mergeData;
     void doMergesort();
-    void mergesort();
+    void mergesort(int data[], int size);
     void merge(int data[], int sizeOne, int sizeTwo);
+    void swap(int first, int second);
+    void quicksort(int first, int last);
+    void doQuick();
+    int partition(int first, int last);
 public:
 	NodeController();
 	virtual ~NodeController();
