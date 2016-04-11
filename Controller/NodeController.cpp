@@ -136,15 +136,15 @@ void NodeController::swap(int first, int last)
 }
 void NodeController :: doQuick()
 {
-    mergeData = new int[1000000000];
-    for (int spot = 0; spot < 1000000000; spot++)
+    mergeData = new int[100000000];
+    for (int spot = 0; spot < 100000000; spot++)
     {
         int myRandom = rand();
         mergeData[spot] = myRandom;
     }
     Timer mergeTimer;
     mergeTimer.startTimer();
-    quicksort(0, 10000000000-1);
+    quicksort(0, 1000000000-1);
     mergeTimer.stopTimer();
     mergeTimer.displayTimerInformation();
     delete[] mergeData;

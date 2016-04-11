@@ -7,3 +7,27 @@
 //
 
 #include "TreNode.hpp"
+template <class Type>
+TreNode<Type> :: TreNode() : Node<Type>()
+{
+    this->leftChild = nullptr;
+    this->rightChild = nullptr;
+    this->parent = nullptr;
+}
+template<class Type>
+TreNode<Type>:: TreNode(const Type& value) : Node<Type>(value)
+{
+    this->leftChild = nullptr;
+    this->rightChild = nullptr;
+    this->parent = nullptr;
+    
+    this->setValue(value);
+}
+template<class Type>
+TreNode<Type>:: TreNode(const Type& value, TreNode<Type> * parent) : Node<Type>(value)
+{
+    this->leftChild = nullptr;
+    this->rightChild = nullptr;
+    
+    this->parent = parent;
+}

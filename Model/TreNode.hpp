@@ -11,8 +11,7 @@
 
 #include "Node.h"
 
-namespace CTECData
-{
+
 template <class Type>
 class TreNode : public Node<Type>
 {
@@ -33,7 +32,5 @@ public:
     TreNode<Type> * getParent();
   
 };
-    
-}
 
 #endif /* TreNode_hpp */
