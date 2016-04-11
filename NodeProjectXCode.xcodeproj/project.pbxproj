@@ -14,6 +14,7 @@
 		824B330F1C99DC1100F2F221 /* CTECList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 824B33051C99DC1100F2F221 /* CTECList.cpp */; };
 		824B33101C99DC1100F2F221 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 824B33071C99DC1100F2F221 /* Node.cpp */; };
 		824B33111C99DC1100F2F221 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 824B33091C99DC1100F2F221 /* Timer.cpp */; };
+		826F37901CBC1D0A00F828EE /* TreNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 826F378E1CBC1D0A00F828EE /* TreNode.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,8 @@
 		824B33081C99DC1100F2F221 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		824B33091C99DC1100F2F221 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		824B330A1C99DC1100F2F221 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		826F378E1CBC1D0A00F828EE /* TreNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreNode.cpp; sourceTree = "<group>"; };
+		826F378F1CBC1D0A00F828EE /* TreNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TreNode.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				824B33081C99DC1100F2F221 /* Node.h */,
 				824B33091C99DC1100F2F221 /* Timer.cpp */,
 				824B330A1C99DC1100F2F221 /* Timer.h */,
+				826F378E1CBC1D0A00F828EE /* TreNode.cpp */,
+				826F378F1CBC1D0A00F828EE /* TreNode.hpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 				824B33111C99DC1100F2F221 /* Timer.cpp in Sources */,
 				824B330C1C99DC1100F2F221 /* NodeRunner.cpp in Sources */,
 				824B330D1C99DC1100F2F221 /* ArrayNode.cpp in Sources */,
+				826F37901CBC1D0A00F828EE /* TreNode.cpp in Sources */,
 				824B330F1C99DC1100F2F221 /* CTECList.cpp in Sources */,
 				824B330E1C99DC1100F2F221 /* CTECArray.cpp in Sources */,
 			);
@@ -281,6 +287,7 @@
 				824B32FB1C99DB8800F2F221 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
