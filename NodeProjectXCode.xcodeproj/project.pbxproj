@@ -15,6 +15,7 @@
 		824B33101C99DC1100F2F221 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 824B33071C99DC1100F2F221 /* Node.cpp */; };
 		824B33111C99DC1100F2F221 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 824B33091C99DC1100F2F221 /* Timer.cpp */; };
 		826F37901CBC1D0A00F828EE /* TreNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 826F378E1CBC1D0A00F828EE /* TreNode.cpp */; };
+		826F37931CBC2CAC00F828EE /* CTECBinaryTre.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 826F37911CBC2CAC00F828EE /* CTECBinaryTre.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,8 @@
 		824B330A1C99DC1100F2F221 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 		826F378E1CBC1D0A00F828EE /* TreNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreNode.cpp; sourceTree = "<group>"; };
 		826F378F1CBC1D0A00F828EE /* TreNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TreNode.hpp; sourceTree = "<group>"; };
+		826F37911CBC2CAC00F828EE /* CTECBinaryTre.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECBinaryTre.cpp; sourceTree = "<group>"; };
+		826F37921CBC2CAC00F828EE /* CTECBinaryTre.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTECBinaryTre.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				824B330A1C99DC1100F2F221 /* Timer.h */,
 				826F378E1CBC1D0A00F828EE /* TreNode.cpp */,
 				826F378F1CBC1D0A00F828EE /* TreNode.hpp */,
+				826F37911CBC2CAC00F828EE /* CTECBinaryTre.cpp */,
+				826F37921CBC2CAC00F828EE /* CTECBinaryTre.hpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				826F37931CBC2CAC00F828EE /* CTECBinaryTre.cpp in Sources */,
 				824B33101C99DC1100F2F221 /* Node.cpp in Sources */,
 				824B330B1C99DC1100F2F221 /* NodeController.cpp in Sources */,
 				824B33111C99DC1100F2F221 /* Timer.cpp in Sources */,

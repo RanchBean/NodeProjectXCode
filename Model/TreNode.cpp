@@ -31,3 +31,33 @@ TreNode<Type>:: TreNode(const Type& value, TreNode<Type> * parent) : Node<Type>(
     
     this->parent = parent;
 }
+template<class Type>
+void TreNode<Type>::setLeftChild(TreNode<Type> * leftChild)
+{
+    this->leftChild = leftChild;
+}
+template<class Type>
+void TreNode<Type>::setRightChild(TreNode<Type> * rightChild)
+{
+    this->rightChild = rightChild;
+}
+template<class Type>
+void TreNode<Type>::setParent(TreNode<Type> * leftChild)
+{
+    this->parent = parent;
+}
+template<class Type>
+TreNode<Type> * TreNode<Type>::getLeftChild()
+{
+    return this->getLeftChild;
+}
+template<class Type>
+TreNode<Type> * TreNode<Type>::getRightChild()
+{
+    return this->getRightChild;
+}
+template<class Type>
+TreNode<Type> * TreNode<Type>::getParent()
+{
+    return this->getParent;
+}
