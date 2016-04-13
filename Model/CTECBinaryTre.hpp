@@ -29,6 +29,9 @@ public:
     int getHeight();
     bool isBalanced();
     TreNode<Type> * getRoot();
+    void preoderTraversal(TreNode<Type> *currentNode);
+    void inorderTraversal(TreNode<Type> *currentNode);
+    void postorderTraversal(TreNode<Type> *currentNode);
 };
 
 #endif /* CTECBinaryTre_hpp */
