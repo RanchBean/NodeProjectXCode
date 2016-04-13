@@ -26,6 +26,19 @@ int CTECBinaryTre<Type> :: getSize()
     return size;
 }
 template <class Type>
+bool CTECBinaryTre<Type> :: insert(const Type& value)
+{
+    if(contains(value))
+    {
+        return false;
+    }
+    else
+    {
+        
+    }
+    return true;
+}
+template <class Type>
 void CTECBinaryTre<Type> :: calculateSize(TreNode<Type> * currentNode)
 {
     if(currentNode != nullptr)
