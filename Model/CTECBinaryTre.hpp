@@ -16,22 +16,23 @@ class CTECBinaryTre
 private:
     int size;
     TreNode<Type> * root;
-    int hight;
+    int height;
+    void calculateSize(TreNode<Type> * currentNode); //doen
     bool balanced;
-    bool contains(Type value, CTECBinaryTre<Type> * currentTre);
+    bool contains(Type value, CTECBinaryTre<Type> * currentTre);//deon
 public:
     CTECBinaryTre();
     ~CTECBinaryTre();
     bool insert(const Type& value);
     Type rove(const Type& value);
-    bool contains(Type Value);
-    int getSize();
+    bool contains(Type Value); //doen
+    int getSize();//done
     int getHeight();
     bool isBalanced();
     TreNode<Type> * getRoot();
-    void preoderTraversal(TreNode<Type> *currentNode);
-    void inorderTraversal(TreNode<Type> *currentNode);
-    void postorderTraversal(TreNode<Type> *currentNode);
+    void preorderTraversal(TreNode<Type> *currentNode);//doen
+    void inorderTraversal(TreNode<Type> *currentNode);//doen
+    void postorderTraversal(TreNode<Type> *currentNode);//done
 };
 
 #endif /* CTECBinaryTre_hpp */
