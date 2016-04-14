@@ -10,7 +10,7 @@
 using namespace std;
 
 template<class Type>
-CTECList<Type>::CTECList(int size)
+CTECList<Type>::CTECList()
 {
 	this->size = 0;
 	this->head = nullptr;
@@ -31,11 +31,6 @@ CTECList<Type>::~CTECList()
 	head = nullptr;
 	end = nullptr;
 	size = 0;
-}
-template <class Type>
-int CTECList<Type>::getSize()
-{
-	return size;
 }
 template <class Type>
 void CTECList<Type> :: swap(int indexOne, int indexTwo)
@@ -135,22 +130,41 @@ void CTECList<Type> :: calculateSize()
 template<class Type>
 Type CTECList<Type>:: getFront()
 {
-	return this->head;
+    return head->getValue();
 }
 template<class Type>
 Type CTECList<Type>:: getEnd()
 {
-
+    return end->getValue();
 }
 template<class Type>
 Type CTECList<Type>:: getFromIndex(int index)
 {
-
+    assert(size > 0 && index >= 0 && index < size);
+    Type returnValue;
+    ArrayNode<Type> * current = head;
+    
+    for(int spot = 0; spot <= index; spot++)
+    {
+        if(spot == index)
+        {
+            returnValue = current->getValue();
+        }
+        current = current->getNext();
+    }
+    return returnValue;
 }
 template<class Type>
 Type CTECList<Type>:: removeFromFront()
 {
+    Type returnValue;
 	assert(this->size > 0);
+    ArrayNode<Type> * newHead;
+    newHead = this->head->getValue();
+    delete this->head;
+    this->head = newHead;
+    this->calculateSize();
+    return returnValue;
 }
 template <class Type>
 Type CTECList<Type>:: removeFromEnd()
@@ -177,9 +191,22 @@ Type CTECList<Type> :: removeFromIndex(int index)
 	{
 		for(int spot = 0; spot< index+1; spot++)
 		{
-
+            if(spot == index -1)
+            {
+                previous = current;
+            }
+            else if(spot == index)
+            {
+                deleteMe = current;
+                newNext = current->getNext();
+            }
 		}
+        thingToRemove = deleteMe->getValue();
+        previous->setNext(newNext);
+        delete deleteMe;
+        this->calculateSize();
 	}
+    return thingToRemove;
 }
 template <class Type>
 Type CTECList<Type>::set(int index, const Type& value)

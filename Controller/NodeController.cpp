@@ -13,9 +13,6 @@ using namespace std;
 
 NodeController::NodeController()
 {
-	notHipsterInts = new CTECArray<int>(5);
-	notHipDoubles = new CTECArray<double>(4);
-
 
 }
 
@@ -37,6 +34,7 @@ void NodeController::merge(int data[], int sizeOne, int sizeTwo)
     int index;
     
     temp = new int[sizeOne + sizeTwo];
+    
     while((copied1 , sizeOne) && (copied2 < sizeTwo))
     {
         if(data[copied1]< (data + sizeOne) [copied2])
@@ -159,7 +157,7 @@ void NodeController::sortData()
      start a timer
      */
     CTECArray<int> randomNumberArray(5000);
-    CTECList<int> randomNumberList;
+    CTECList<int>   randomNumberList;
     int myCPPArray[5000];
     for(int spot = 0; spot < 5000; spot++)
     {

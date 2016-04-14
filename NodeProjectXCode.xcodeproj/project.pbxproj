@@ -16,6 +16,9 @@
 		824B33111C99DC1100F2F221 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 824B33091C99DC1100F2F221 /* Timer.cpp */; };
 		826F37901CBC1D0A00F828EE /* TreNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 826F378E1CBC1D0A00F828EE /* TreNode.cpp */; };
 		826F37931CBC2CAC00F828EE /* CTECBinaryTre.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 826F37911CBC2CAC00F828EE /* CTECBinaryTre.cpp */; };
+		82EBFD361CC024AC00862A88 /* NodeController1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82EBFD351CC024AC00862A88 /* NodeController1.cpp */; };
+		82EBFD3A1CC0259900862A88 /* CTECList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82EBFD391CC0259900862A88 /* CTECList.cpp */; };
+		82EBFD3D1CC028F800862A88 /* ArrayNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82EBFD3C1CC028F800862A88 /* ArrayNode.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +52,10 @@
 		826F378F1CBC1D0A00F828EE /* TreNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TreNode.hpp; sourceTree = "<group>"; };
 		826F37911CBC2CAC00F828EE /* CTECBinaryTre.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECBinaryTre.cpp; sourceTree = "<group>"; };
 		826F37921CBC2CAC00F828EE /* CTECBinaryTre.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTECBinaryTre.hpp; sourceTree = "<group>"; };
+		82EBFD351CC024AC00862A88 /* NodeController1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NodeController1.cpp; sourceTree = "<group>"; };
+		82EBFD391CC0259900862A88 /* CTECList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECList.cpp; sourceTree = "<group>"; };
+		82EBFD3B1CC025A300862A88 /* CTECList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTECList.h; sourceTree = "<group>"; };
+		82EBFD3C1CC028F800862A88 /* ArrayNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayNode.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +89,7 @@
 		824B32FC1C99DC1100F2F221 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				82EBFD381CC0257500862A88 /* CodyCode */,
 				824B32FD1C99DC1100F2F221 /* NodeController.cpp */,
 				824B32FE1C99DC1100F2F221 /* NodeController.h */,
 				824B32FF1C99DC1100F2F221 /* NodeRunner.cpp */,
@@ -108,6 +116,17 @@
 				826F37921CBC2CAC00F828EE /* CTECBinaryTre.hpp */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		82EBFD381CC0257500862A88 /* CodyCode */ = {
+			isa = PBXGroup;
+			children = (
+				82EBFD3C1CC028F800862A88 /* ArrayNode.cpp */,
+				82EBFD3B1CC025A300862A88 /* CTECList.h */,
+				82EBFD391CC0259900862A88 /* CTECList.cpp */,
+				82EBFD351CC024AC00862A88 /* NodeController1.cpp */,
+			);
+			name = CodyCode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +194,9 @@
 				826F37901CBC1D0A00F828EE /* TreNode.cpp in Sources */,
 				824B330F1C99DC1100F2F221 /* CTECList.cpp in Sources */,
 				824B330E1C99DC1100F2F221 /* CTECArray.cpp in Sources */,
+				82EBFD3A1CC0259900862A88 /* CTECList.cpp in Sources */,
+				82EBFD361CC024AC00862A88 /* NodeController1.cpp in Sources */,
+				82EBFD3D1CC028F800862A88 /* ArrayNode.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
