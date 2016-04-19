@@ -26,19 +26,6 @@ int CTECBinaryTre<Type> :: getSize()
     return size;
 }
 template <class Type>
-bool CTECBinaryTre<Type> :: insert(const Type& value)
-{
-    if(contains(value))
-    {
-        return false;
-    }
-    else
-    {
-        
-    }
-    return true;
-}
-template <class Type>
 void CTECBinaryTre<Type> :: calculateSize(TreNode<Type> * currentNode)
 {
     if(currentNode != nullptr)
@@ -133,4 +120,63 @@ bool CTECBinaryTre<Type> :: contains(Type value, CTECBinaryTre<Type> * currentTr
     }
     return isInTre;
 }
-
+template <class Type>
+bool CTECBinaryTre<Type> :: insert(const Type& value)
+{
+    if(contains(value))
+    {
+        return false;
+    }
+    else
+    {
+        CTECBinaryTre<Type> * currentNode = root;
+        CTECBinaryTre<Type> * trailNode;
+        
+        if(root == nullptr)
+        {
+            root = new TreNode<Type>(value);
+        }
+        else
+        {
+            while(currentNode != nullptr)
+            {
+                trailNode = currentNode;
+                
+                if (currentNode->getValue() < value)
+                {
+                    currentNode = currentNode->getRightChild();
+                }
+                else
+                {
+                    currentNode = currentNode->getLeftChild();
+                }
+            }
+            if(trailNode->getValue() > value)
+            {
+                trailNode->setLeftChild(new TreNode<Type>(value, trailNode));
+            }
+            else
+            {
+                TreNode<Type> * insertedNode = new TreNode<Type>(value, trailNode);
+                trailNode->setRightChild(insertedNode);
+            }
+        }
+    }
+    return true;
+    CTECBinaryTre<Type> * newNode;
+}
+template <class Type>
+void CTECBinaryTre<Type> :: deleteFromTree(TreNode<Type> * toDelete)
+{
+     CTECBinaryTre *current;
+     CTECBinaryTre *trailCurrent;
+     CTECBinaryTre *temp;
+    if(toDelete == nullptr)
+    {
+        cerr << "Error : The node is to be deleted is null." <<endl;
+    }
+    else if(toDelete->getLeft == nullptr && toDelete->getleftLink == nullptr)
+    {
+        
+    }
+}

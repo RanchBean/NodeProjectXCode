@@ -20,10 +20,12 @@ private:
     void calculateSize(TreNode<Type> * currentNode); //doen
     bool balanced;
     bool contains(Type value, CTECBinaryTre<Type> * currentTre);//deon
+    TreNode<Type> * getRightMostChild(CTECBinaryTre<Type> leftSubTree);
+    TreNode<Type> * getLeftMostChild(CTECBinaryTre<Type> rightSubTree);
 public:
     CTECBinaryTre();
     ~CTECBinaryTre();
-    bool insert(const Type& value);
+    bool insert(const Type& value);//done
     Type rove(const Type& value);
     bool contains(Type Value); //doen
     int getSize();//done
@@ -33,6 +35,7 @@ public:
     void preorderTraversal(TreNode<Type> *currentNode);//doen
     void inorderTraversal(TreNode<Type> *currentNode);//doen
     void postorderTraversal(TreNode<Type> *currentNode);//done
+    void deleteFromTree(TreNode<Type> * toDelete);
 };
 
 #endif /* CTECBinaryTre_hpp */
