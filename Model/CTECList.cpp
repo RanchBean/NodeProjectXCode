@@ -163,7 +163,7 @@ Type CTECList<Type>:: removeFromFront()
     newHead = this->head->getValue();
     delete this->head;
     this->head = newHead;
-    this->calculateSize();
+    this->calculateSize(returnValue);
     return returnValue;
 }
 template <class Type>
