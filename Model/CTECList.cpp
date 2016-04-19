@@ -195,7 +195,7 @@ Type CTECList<Type> :: removeFromIndex(int index)
             {
                 previous = current;
             }
-            else if(spot == index)
+            else if(spot == index),=,e
             {
                 deleteMe = current;
                 newNext = current->getNext();

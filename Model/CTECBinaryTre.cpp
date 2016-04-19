@@ -166,6 +166,30 @@ bool CTECBinaryTre<Type> :: insert(const Type& value)
     CTECBinaryTre<Type> * newNode;
 }
 template <class Type>
+TreNode<Type> * CTECBinaryTre<Type> :: getRightMostChild(CTECBinaryTre<Type> leftSubTree)
+{
+    TreNode<Type> * rightNode = leftSubTree->getRoot();
+    while(rightNode->getRightChild() != nullptr)
+    {
+        rightNode = rightNode->getRightMostChild();
+    }
+    
+    return rightNode;
+    
+}
+template <class Type>
+TreNode<Type> * CTECBinaryTre<Type> :: getLeftMostChild(CTECBinaryTre<Type> rightSubTree)
+{
+    TreNode<Type> * leftNode = rightSubTree->getRoot();
+    while(leftNode->getRightChild() != nullptr)
+    {
+        rightNode = leftNode->getLeftMostChild();
+    }
+    
+    return rightNode;
+    
+}
+template <class Type>
 void CTECBinaryTre<Type> :: deleteFromTree(TreNode<Type> * toDelete)
 {
      CTECBinaryTre *current;
