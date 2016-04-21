@@ -97,12 +97,12 @@ bool CTECBinaryTre<Type> :: contains(Type value)
     return isInTre;
 }
 template <class Type>
-bool CTECBinaryTre<Type> :: contains(Type value, CTECBinaryTre<Type> * currentTre)
+bool CTECBinaryTre<Type> :: contains(Type value, TreNode<Type> * currentTre)
 {
     bool isInTre = false;
     if(currentTre !=nullptr)
     {
-        if(currentTre->getRoot()->getValue() == value)
+        if(currentTre->getValue() == value)
         {
             isInTre = true;
         }
@@ -110,11 +110,11 @@ bool CTECBinaryTre<Type> :: contains(Type value, CTECBinaryTre<Type> * currentTr
         {
             if(value < root->getValue())
             {
-                isInTre = contains(value, currentTre->getRoot()->getLesftChild());
+                isInTre = contains(value, currentTre->getLesftChild());
             }
             else
             {
-                isInTre = contains(value, currentTre->getRoot()->getRightChild());
+                isInTre = contains(value, currentTre->getRightChild());
             }
         }
     }
@@ -166,9 +166,9 @@ bool CTECBinaryTre<Type> :: insert(const Type& value)
     CTECBinaryTre<Type> * newNode;
 }
 template <class Type>
-TreNode<Type> * CTECBinaryTre<Type> :: getRightMostChild(CTECBinaryTre<Type> leftSubTree)
+TreNode<Type> * CTECBinaryTre<Type> :: getRightMostChild(TreNode<Type> leftSubTree)
 {
-    TreNode<Type> * rightNode = leftSubTree->getRoot();
+    TreNode<Type> * rightNode = leftSubTree;
     while(rightNode->getRightChild() != nullptr)
     {
         rightNode = rightNode->getRightMostChild();
@@ -178,9 +178,9 @@ TreNode<Type> * CTECBinaryTre<Type> :: getRightMostChild(CTECBinaryTre<Type> lef
     
 }
 template <class Type>
-TreNode<Type> * CTECBinaryTre<Type> :: getLeftMostChild(CTECBinaryTre<Type> rightSubTree)
+TreNode<Type> * CTECBinaryTre<Type> :: getLeftMostChild(TreNode<Type> rightSubTree)
 {
-    TreNode<Type> * leftNode = rightSubTree->getRoot();
+    TreNode<Type> * leftNode = rightSubTree;
     while(leftNode->getRightChild() != nullptr)
     {
         rightNode = leftNode->getLeftMostChild();
