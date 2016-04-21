@@ -204,3 +204,42 @@ void CTECBinaryTre<Type> :: deleteFromTree(TreNode<Type> * toDelete)
         
     }
 }
+template <class Type>
+void CTECBinaryTre<Type> :: remove(const Type& value)
+{
+    TreNode<Type> * current;
+    TreNode<Type> * trailing;
+    if(!conatains(value))
+    {
+        return;
+    }
+    else
+    {
+        current = root;
+        trailing = root;
+        while(current != nullptr && current->getValue() != value)
+        {
+            trailing = current;
+            if(current->getValue()> value)
+            {
+                current = current->getLeftChild();
+            }
+            else
+            {
+                current = current->getRightChild();
+            }
+        }
+        if(current == root)
+        {
+            remove(root);
+        }
+        else if(trailing->getValue() > value)
+        {
+            remove(trailing->getLeftChild());
+        }
+        else
+        {
+            remove(trailing->getRightChild());
+        }
+    }
+}
