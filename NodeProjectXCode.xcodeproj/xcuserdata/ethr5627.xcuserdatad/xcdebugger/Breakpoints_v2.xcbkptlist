@@ -9,22 +9,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Controller/NodeController.cpp"
-            timestampString = "481139832.212162"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "NodeController::merge(int data[], int sizeOne, int sizeTwo)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Model/CTECList.cpp"
             timestampString = "482780365.157366"
             startingColumnNumber = "9223372036854775807"
@@ -33,6 +17,28 @@
             endingLineNumber = "196"
             landmarkName = "removeFromIndex(int index)"
             landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Model/CTECBinaryTre.cpp"
+            timestampString = "482787881.92763"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -42,11 +48,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Model/CTECBinaryTre.cpp"
-            timestampString = "482787881.92763"
+            timestampString = "482956653.897163"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12">
+            startingLineNumber = "13"
+            endingLineNumber = "13">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CTECBinaryTre&lt;int&gt;::CTECBinaryTre()"
+                  moduleName = "NodeProjectXCode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ethr5627/Documents/C++%20Workspace/NodeProjectXCode/Controller/../Model/CTECBinaryTre.cpp"
+                  timestampString = "482957661.383947"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CTECBinaryTre&lt;int&gt;::CTECBinaryTre()"
+                  moduleName = "NodeProjectXCode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ethr5627/Documents/C++%20Workspace/NodeProjectXCode/Controller/../Model/CTECBinaryTre.cpp"
+                  timestampString = "482957661.384141"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

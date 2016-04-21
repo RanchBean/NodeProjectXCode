@@ -177,7 +177,7 @@ Type CTECList<Type> :: removeFromIndex(int index)
 	assert(this->size > 0);
 	assert(index >= 0 && index < size);
 	Type thingToRemove;
-	ArrayNode<Type> * previous,deleteMe,newNext;
+	ArrayNode<Type> * current,previous,deleteMe,newNext;
 
 	if(index == 0)
 	{

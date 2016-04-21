@@ -22,7 +22,7 @@ private:
     bool contains(Type value, TreNode<Type> * currentTre);//deon
     TreNode<Type> * getRightMostChild(TreNode<Type> leftSubTree);
     TreNode<Type> * getLeftMostChild(TreNode<Type> rightSubTree);
-    void remove(TreNode<Type> nodeToBeRemoved);
+    void remove(TreNode<Type> * nodeToBeRemoved);
 public:
     CTECBinaryTre();
     ~CTECBinaryTre();

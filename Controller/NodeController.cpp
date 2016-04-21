@@ -7,7 +7,7 @@
 
 #include "NodeController.h"
 
-#include <iostream>
+#include <iostream> 
 #include <stdlib.h> //allows rand() funtion access
 using namespace std;
 
@@ -24,6 +24,10 @@ NodeController::~NodeController()
 void NodeController :: start()
 {
     doMergesort();
+}
+void NodeController :: tryTre()
+{
+    CTECBinaryTre<int> firstTree;
 }
 void NodeController::merge(int data[], int sizeOne, int sizeTwo)
 {

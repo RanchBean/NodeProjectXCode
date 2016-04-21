@@ -19,6 +19,11 @@ CTECBinaryTre<Type> :: CTECBinaryTre()
     this->balanced = true;
 }
 template <class Type>
+CTECBinaryTre<Type> :: ~CTECBinaryTre()
+{
+    
+}
+template <class Type>
 int CTECBinaryTre<Type> :: getSize()
 {
     size = 0;
@@ -183,10 +188,10 @@ TreNode<Type> * CTECBinaryTre<Type> :: getLeftMostChild(TreNode<Type> rightSubTr
     TreNode<Type> * leftNode = rightSubTree;
     while(leftNode->getRightChild() != nullptr)
     {
-        rightNode = leftNode->getLeftMostChild();
+        leftNode = leftNode->getLeftMostChild();
     }
     
-    return rightNode;
+    return leftNode;
     
 }
 template <class Type>
