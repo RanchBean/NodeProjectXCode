@@ -30,8 +30,8 @@ public:
     int size();
     bool isEdge(int source, int target)const;
     std::set<int> neighbors(int vertex)const;
-    void depthFirstTraversal(CTECGraph<Type> , int vertex);
-    void breadthFirstTraversal(CTECGraph<Type> , int vertex);
+    void depthFirstTraversal(CTECGraph<Type> currentGraph, int vertex);
+    void breadthFirstTraversal(CTECGraph<Type> currentGraph, int vertex);
     
 };
 #endif /* CTECGraph_hpp */

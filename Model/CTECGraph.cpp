@@ -6,10 +6,22 @@
 //  Copyright © 2016 CTEC. All rights reserved.
 //
 #include "CTECGraph.hpp"
-
+#include <queue>
+#include <iostream>
+using namespace std;
 
 template <class Type>
 const int CTECGraph<Type> :: MAXIMUM;
+template <class Type>
+CTECGraph<Type> :: CTECGraph()
+{
+    
+}
+template <class Type>
+CTECGraph<Type> :: ~CTECGraph()
+{
+    
+}
 
 template <class Type>
 void CTECGraph<Type> :: addVertex(const Type& value)
@@ -97,7 +109,7 @@ void CTECGraph<Type> :: depthFirstTraversal(CTECGraph<Type> currentGraph, int ve
     depthFirstTraversal(currentGraph,vertex, markedVertices);
 }
 template <class Type>
-void CTECGraph<Type> :: breadthFirstTraversal(CTECGraph, int vertex)
+void CTECGraph<Type> :: breadthFirstTraversal(CTECGraph<Type> currentGraph, int vertex)
 {
     bool markedVertices[MAXIMUM];
     std::set<int> connections;
@@ -106,7 +118,7 @@ void CTECGraph<Type> :: breadthFirstTraversal(CTECGraph, int vertex)
     assert(vertex < currentGraph.size());
     
     std::fill_n(markedVertices,currentGraph.size(),false);
-    markedVertices[vertex]
+    markedVertices[vertex];
 }
 
 
