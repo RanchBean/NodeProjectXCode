@@ -20,7 +20,7 @@ private:
     double effeciency;
     int findPosition(const Type& value);
     int handleCollision(const Type& value);
-    void updateSize();
+    void updateCapacity();
 public:
     CTECHashTable();
     ~CTECHashTable();

@@ -23,7 +23,29 @@ CTECHashTable<Type> :: ~CTECHashTable()
     delete [] internalStorage;
 }
 template <class Type>
-int CTECHashTable :: getSize()
+int CTECHashTable<Type> :: getSize()
 {
     return this->size;
+}
+template <class Type>
+void CTECHashTable<Type> :: add(const Type& value)
+{
+    if(!contains(value))
+    {
+        //resize if needed
+        if(size/capacity >= this->efficencyPercentage)
+        {
+            updateCapacity();
+        }
+        int insertionIndex = findPosition(value);
+        if(internalStorage[insertionIndex] != nullptr)
+        {
+            while (internalStorage[insertionIndex] != nullptr)
+            {
+                insertionIndex = (insertionIndex + 1) % capacity;
+            }
+        }
+        internalStorage[insertionIndex] = value;
+        size++;
+    }
 }
