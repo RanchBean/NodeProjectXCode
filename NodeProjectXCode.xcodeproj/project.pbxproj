@@ -48,8 +48,8 @@
 		824B33081C99DC1100F2F221 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		824B33091C99DC1100F2F221 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		824B330A1C99DC1100F2F221 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
-		826F2CF51CE106AB00FB2779 /* HashNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HashNode.cpp; path = Model/HashNode.cpp; sourceTree = "<group>"; };
-		826F2CF61CE106AB00FB2779 /* HashNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HashNode.hpp; path = Model/HashNode.hpp; sourceTree = "<group>"; };
+		826F2CF51CE106AB00FB2779 /* HashNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HashNode.cpp; sourceTree = "<group>"; };
+		826F2CF61CE106AB00FB2779 /* HashNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HashNode.hpp; sourceTree = "<group>"; };
 		826F378E1CBC1D0A00F828EE /* TreNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreNode.cpp; sourceTree = "<group>"; };
 		826F378F1CBC1D0A00F828EE /* TreNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TreNode.hpp; sourceTree = "<group>"; };
 		826F37911CBC2CAC00F828EE /* CTECBinaryTre.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECBinaryTre.cpp; sourceTree = "<group>"; };
@@ -74,8 +74,6 @@
 		824B32E91C99DB8800F2F221 = {
 			isa = PBXGroup;
 			children = (
-				826F2CF51CE106AB00FB2779 /* HashNode.cpp */,
-				826F2CF61CE106AB00FB2779 /* HashNode.hpp */,
 				824B32FC1C99DC1100F2F221 /* Controller */,
 				824B33001C99DC1100F2F221 /* Model */,
 				824B32F31C99DB8800F2F221 /* Products */,
@@ -121,6 +119,8 @@
 				82F96D261CCE8FCC00C9180C /* CTECGraph.hpp */,
 				8280C3651CDBC478005B478D /* CTECHashTable.cpp */,
 				8280C3661CDBC478005B478D /* CTECHashTable.hpp */,
+				826F2CF51CE106AB00FB2779 /* HashNode.cpp */,
+				826F2CF61CE106AB00FB2779 /* HashNode.hpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";

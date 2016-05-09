@@ -7,20 +7,19 @@
 //
 
 #include "HashNode.hpp"
-#ifndef HashNode_hpp
-#define HashNode_hpp
-
-#include <iostream>
-
 template <class Type>
-class HashNode
+HashNode<Type> :: HashNode(int key, const Type& value)
 {
-private:
-    int key;
-    Type value;
-public:
-    HashNode(int key, const Type& value)
-    int getKey();
-    Type getValue();
-};
-#endif /* HashNode_hpp */
+    this->key = key;
+    this->value = value;
+}
+template <class Type>
+int HashNode<Type> :: getKey()
+{
+    return key;
+}
+template <class Type>
+Type HashNode<Type> :: getValue()
+{
+    return value;
+}
