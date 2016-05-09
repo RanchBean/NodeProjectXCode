@@ -22,9 +22,14 @@ private:
     int findPosition(HashNode<Type> currentNode);
     int handleCollision(HashNode<Type> currentNode);
     void updateCapacity();
+    
+    int getNextPrime();
+    bool isPrime(int canidateNumber);
+    
 public:
     CTECHashTable();
     ~CTECHashTable();
+    
     void add(HashNode<Type> currentNode);
     bool remove(HashNode<Type> currentNode);
     bool contains(HashNode<Type> currentNode);
