@@ -19,7 +19,7 @@ CTECHashTable<Type> :: CTECHashTable()
     this->internalStorage = new HashNode<Type>[capacity];
     this->chainedSize = 0;
     this->chainedCapacity = 101;
-    this->chainedStorage= new CTECList<HashNode <Type>>[chainedCapacity];
+    this->chainedStorage = new CTECList<HashNode<Type>>[chainedCapacity];
 }
 template <class Type>
 CTECHashTable<Type> :: ~CTECHashTable()
@@ -55,7 +55,28 @@ void CTECHashTable<Type> :: add(HashNode<Type> currentNode)
         size++;
     }
 }
-
+template <class Type>
+void CTECHashTable<Type> :: addChained(HashNode<Type> currentNode)
+{
+    if((chainedSize / chainedCapacity) >= this->efficiencyPercentage)
+    {
+        
+    }
+    int insertionIndex = findPosition(currentNode);
+    
+    if(chainedStorage[insertionIndex] != nullptr)
+    {
+        CTECList<HashNode<Type>> temp = chainedStorage[insertionIndex];
+        temp.addEnd(currentNode);
+    }
+    else
+    {
+        CTECList<HashNode<Type>> tempList;
+        tempList.addEnd(currentNode);
+        chainedStorage[insertionIndex] = tempList;
+    }
+    chainedSize++;
+}
 
 template <class Type>
 int CTECHashTable<Type> ::findPosition(HashNode<Type> currentNode)
@@ -131,6 +152,36 @@ void CTECHashTable<Type> :: updateCapacity()
         }
     }
     internalStorage = largerStorage;
+}
+template <class Type>
+void CTECHashTable<Type> :: updateChainedCapacity()
+{
+    int updatedChainedCapacity = getNextPrime();
+    int oldChainedCapacity = chainedCapacity();
+    chainedCapacity = updatedChainedCapacity;
+    
+    CTECList<HashNode<Type>> * largerChainedStorage = new CTECList<HashNode<Type>>[updatedChainedCapacity];
+    for(int index = 0; index < oldChainedCapacity; index++)
+    {
+        if(chainedStorage[index] != nullptr)
+        {
+            CTECList<HashNode<Type>> temp = chainedStorage[index];
+            for(int innerIndex = 0; innerIndex < temp.getSize(); innerIndex++)
+            {
+                int updatedChainedPosition = findPositon(temp.getFromIndex(innerIndex));
+                if(largerChainedStorage[updatedChainedPosition] == nullptr)
+                {
+                    CTECList<HashNode<Type>> insertList;
+                    insertList.addEnd(temp.getFromIndex(innerIndex));
+                    largerChainedStorage[updatedChainedPosition] = insertList;
+                }
+                else
+                {
+                    largerChainedStorage[updatedChainedPosition].addEnd(temp.getFromIndex(innerIndex));
+                }
+            }
+        }
+    }
 }
 template <class Type>
 bool CTECHashTable<Type> :: contains(HashNode<Type> currentNode)

@@ -28,6 +28,7 @@ private:
     int findPosition(HashNode<Type> currentNode);
     int handleCollision(HashNode<Type> currentNode);
     void updateCapacity();
+    void updateChainedCapacity();
     
     int getNextPrime();
     bool isPrime(int canidateNumber);
