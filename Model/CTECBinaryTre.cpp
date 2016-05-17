@@ -134,7 +134,7 @@ bool CTECBinaryTre<Type> :: insert(const Type& value)
     }
     else
     {
-        CTECBinaryTre<Type> * currentNode = root;
+        CTECBinaryTre<int> * currentNode = root;
         CTECBinaryTre<Type> * trailNode;
         
         if(root == nullptr)

@@ -30,7 +30,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Model/CTECBinaryTre.cpp"
@@ -44,7 +44,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Model/CTECBinaryTre.cpp"
@@ -55,14 +55,14 @@
             endingLineNumber = "13">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "CTECBinaryTre&lt;int&gt;::CTECBinaryTre()"
                   moduleName = "NodeProjectXCode"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ethr5627/Documents/C++%20Workspace/NodeProjectXCode/Controller/../Model/CTECBinaryTre.cpp"
-                  timestampString = "482957661.383947"
+                  timestampString = "484855217.183209"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -70,14 +70,14 @@
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "CTECBinaryTre&lt;int&gt;::CTECBinaryTre()"
                   moduleName = "NodeProjectXCode"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ethr5627/Documents/C++%20Workspace/NodeProjectXCode/Controller/../Model/CTECBinaryTre.cpp"
-                  timestampString = "482957661.384141"
+                  timestampString = "484855217.183375"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -101,6 +101,22 @@
             endingLineNumber = "16"
             landmarkName = "CTECGraph()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controller/NodeController.cpp"
+            timestampString = "484858653.595486"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "NodeController :: testLists()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

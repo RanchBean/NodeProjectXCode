@@ -14,6 +14,8 @@
 #include "../Model/Timer.h"
 #include "../Model/CTECList.cpp"
 #include "../Model/CTECBinaryTre.cpp"
+#include "../Model/CTECGraph.cpp"
+
 #include <string>
 using namespace std;
 
@@ -22,6 +24,9 @@ class NodeController
 private:
 	CTECArray<int> * notHipsterInts;
 	CTECArray<double> * notHipDoubles;
+    CTECList<int> * numbers;
+    Timer * timer;
+    CTECArray<int> * array;
 	Node<string> stringNode;
 	Node<int> intNode;
 	ArrayNode<string> stringArrayNode;
@@ -37,9 +42,12 @@ private:
     void doQuick();
     int partition(int first, int last);
     void tryTre();
+    void tryGraphs();
+    void testHashTable();
 public:
 	NodeController();
 	virtual ~NodeController();
+    void testLists();
 	void start();
 };
 

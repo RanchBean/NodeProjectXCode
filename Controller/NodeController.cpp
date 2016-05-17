@@ -8,12 +8,14 @@
 #include "NodeController.h"
 
 #include <iostream> 
-#include <stdlib.h> //allows rand() funtion access
+#include <stdlib.h> //allows rand() function access
 using namespace std;
 
 NodeController::NodeController()
 {
-
+    numbers = new CTECList<int>();
+    timer = new Timer();
+    array = new CTECArray<int>(5);
 }
 
 NodeController::~NodeController()
@@ -23,11 +25,48 @@ NodeController::~NodeController()
 
 void NodeController :: start()
 {
-    doMergesort();
+    
+}
+void NodeController :: testLists()
+
+{
+    
+    numbers->addToFront(3);
+    
+    numbers->addToEnd(8);
+    
+    cout << "End should be 8 and is: " << numbers->getEnd() << endl;
+    
+    cout << "Head should be 3 and is: " << numbers->getFront() << endl;
+    
 }
 void NodeController :: tryTre()
 {
-    CTECBinaryTre<int> firstTree;
+    
+    CTECBinaryTre<int> firstTre;
+    firstTre.insert(34);
+    firstTre.insert(68);
+    cout << "Current size of tree is " << firstTre.getSize() << endl;
+    firstTre.insert(581);
+    firstTre.insert(-87);
+    firstTre.insert(7);
+    cout << "Current size of tree is " << firstTre.getSize() << endl;
+    firstTre.insert(1);
+    cout << "Current size of tree is " << firstTre.getSize() << endl;
+    cout << "The Tree in order traversal: " << endl;
+    firstTre.inorderTraversal(firstTre.getRoot());
+    cout << endl;
+    cout << "The Tree pre order traversal: " << endl;
+    firstTre.preorderTraversal(firstTre.getRoot());
+    cout << endl;
+    cout << "The Tree post order traversal: " << endl;
+    firstTre.postorderTraversal(firstTre.getRoot());
+    cout << endl;
+    firstTre.remove(2);
+    cout << "In order traversal after remove: " << endl;
+    firstTre.inorderTraversal(firstTre.getRoot());
+    
+    
 }
 void NodeController::merge(int data[], int sizeOne, int sizeTwo)
 {
@@ -63,6 +102,47 @@ void NodeController::merge(int data[], int sizeOne, int sizeTwo)
         data[index] = temp [index];
     }
     delete [] temp;
+}
+void NodeController :: testHashTable()
+{
+    CTECHashTable<int> tempTable;
+    HashNode<int> tempArray[10];
+    for(int spot = 0; spot < 10; spot++)
+    {
+        int randomValue= rand();
+        int randomKey = rand();
+        HashNode<int> temp = HashNode<int>(randomKey, randomValue);
+        tempTable.add(temp);
+        tempArray[spot] = temp;
+    }
+    bool test = tempTable.contains(tempArray[0]);
+    string result;
+    if(test)
+    {
+        result = "it's right there";
+    }
+    else
+    {
+        result = "not anywhere else";
+    }
+    cout << result << endl;
+}
+void NodeController :: tryGraphs()
+{
+    CTECGraph<int> * graph = new CTECGraph<int>();
+    graph->addVertex(5);
+    graph->addEdge(0,1);
+    graph->addVertex(4);
+    graph->addEdge(1,2);
+    graph->addVertex(17);
+    graph->addEdge(2,3);
+    graph->addVertex(212);
+    graph->addEdge(3,4);
+    graph->addVertex(1);
+    graph->addEdge(4,5);
+    graph->addVertex(-23);
+    graph->addEdge(5,6);
+    graph->addVertex(787);
 }
 void NodeController::doMergesort()
     {

@@ -23,3 +23,8 @@ Type HashNode<Type> :: getValue()
 {
     return value;
 }
+template <class Type>
+HashNode<Type> :: HashNode()
+{
+    
+}

@@ -63,12 +63,12 @@ template<class Type>
 void CTECArray<Type> :: set(const Type& value, int position)
 {
 
-	assert(position < size && position>= 0);
+	assert(position < size && position >= 0);
 
 	ArrayNode<Type> * current = head;
 	for (int spot = 0; spot <= position; spot++)
 	{
-		if (spot != position)
+		if(spot != position)
 		{
 			current = current->getNext();
 		}
