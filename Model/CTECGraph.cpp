@@ -22,7 +22,6 @@ CTECGraph<Type> :: ~CTECGraph()
 {
     
 }
-
 template <class Type>
 void CTECGraph<Type> :: addVertex(const Type& value)
 {
